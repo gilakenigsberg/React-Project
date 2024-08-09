@@ -1,4 +1,4 @@
-// import React from 'react';
+// import React from 'react'
 
 // const Services = () => {
 //   return (
@@ -6,25 +6,25 @@
 //       <h2>Services</h2>
 //       {/* Add functionality to list, add, edit, and delete services */}
 //     </div>
-//   );
-// };
+//   )
+// }
 
-// export default Services;
+// export default Services
 
 
-import React, { useState, useEffect } from 'react';
-import { getServices } from '../../api';
+import React, { useState, useEffect } from 'react'
+import { getServices } from '../../api'
 
-const Services = () => {
-  const [services, setServices] = useState<Service[]>([]);
+const businessServices = () => {
+  const [services, setServices] = useState<Service[]>([])
 
   useEffect(() => {
     const fetchServices = async () => {
-      const response = await getServices();
-      setServices(response.data);
-    };
-    fetchServices();
-  }, []);
+      const response = await getServices()
+      setServices(response.data)
+    }
+    fetchServices()
+  }, [])
 
   return (
     <div>
@@ -35,7 +35,7 @@ const Services = () => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Services;
+export default businessServices

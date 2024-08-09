@@ -1,27 +1,45 @@
-import React from "react";
 import { Route, Link, Routes } from "react-router-dom";
 import Home from "../components/user/home.component";
 import BookAppointment from "../components/user/meeting.component";
-import ContactForm from "../components/user/payment.component";
+import ContactForm from "../components/user/Contact.component";
+import Services from "../components/user/services.component";
+import Bar from "../components/user/Bar";
 
 const UserPage = () => {
   return (
-    <div>
-      <h1>Photography Business</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
+    <div className="user-page-container">
+      <Bar />
+      <h1 className="page-title">Photography Business</h1>
+      {/* <nav className="page-nav">
+        <ul className="nav-list">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
           </li>
-          <li>
-            <Link to="/book-appointment">Book Appointment</Link>
+          <li className="nav-item">
+            <Link to="/book-appointment" className="nav-link">
+              Book Appointment
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/contact-form" className="nav-link">
+              Contact Form
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/orders" className="nav-link">
+              My orders
+            </Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/book-appointment" element={<BookAppointment />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/BookAppointment" element={<BookAppointment />} />
+        <Route path="/ContactForm" element={<ContactForm />} />
+        <Route path="/Services" element={<Services />} />
       </Routes>
     </div>
   );

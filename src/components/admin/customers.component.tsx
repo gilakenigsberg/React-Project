@@ -1,4 +1,4 @@
-// import React from 'react';
+// import React from 'react'
 
 // const Customers = () => {
 //   return (
@@ -6,25 +6,25 @@
 //       <h2>Customers</h2>
 //       {/* Add functionality to list and manage customers */}
 //     </div>
-//   );
-// };
+//   )
+// }
 
-// export default Customers;
+// export default Customers
 
 
-import React, { useState, useEffect } from 'react';
-import { getCustomers } from '../../api';
+import React, { useState, useEffect } from 'react'
+import { getCustomers } from '../../api'
 
 const Customers = () => {
-  const [customers, setCustomers] = useState<Customer[]>([]);
+  const [customers, setCustomers] = useState<Customer[]>([])
 
   useEffect(() => {
     const fetchCustomers = async () => {
-      const response = await getCustomers();
-      setCustomers(response.data);
-    };
-    fetchCustomers();
-  }, []);
+      const response = await getCustomers()
+      setCustomers(response.data)
+    }
+    fetchCustomers()
+  }, [])
 
   return (
     <div>
@@ -35,7 +35,7 @@ const Customers = () => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Customers;
+export default Customers
