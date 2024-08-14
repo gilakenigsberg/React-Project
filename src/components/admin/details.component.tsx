@@ -1,4 +1,4 @@
-// import React from 'react';
+// import React from 'react'
 
 // const BusinessDetails = () => {
 //   return (
@@ -7,25 +7,25 @@
 //       <p>Address: Example Address</p>
 //       <p>Contact: example@example.com</p>
 //     </div>
-//   );
-// };
+//   )
+// }
 
-// export default BusinessDetails;
+// export default BusinessDetails
 
 
-import React, { useState, useEffect } from 'react';
-import { getBusinessDetails } from '../../api';
+import React, { useState, useEffect } from 'react'
+import { getBusinessDetails } from '../../api'
 
 const BusinessDetails = () => {
-  const [details, setDetails] = useState({ address: '', contact: '' });
+  const [details, setDetails] = useState({ address: '', contact: '' })
 
   useEffect(() => {
     const fetchDetails = async () => {
-      const response = await getBusinessDetails();
-      setDetails(response.data);
-    };
-    fetchDetails();
-  }, []);
+      const response = await getBusinessDetails()
+      setDetails(response.data)
+    }
+    fetchDetails()
+  }, [])
 
   return (
     <div>
@@ -33,7 +33,7 @@ const BusinessDetails = () => {
       <p>Address: {details.address}</p>
       <p>Contact: {details.contact}</p>
     </div>
-  );
-};
+  )
+}
 
-export default BusinessDetails;
+export default BusinessDetails

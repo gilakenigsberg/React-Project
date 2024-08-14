@@ -1,0 +1,59 @@
+
+/* סגנונות כלליים */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* כותרת ראשית */
+  h1 {
+    text-align: center;
+    color: #333;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* ניווט */
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin: 0 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #666;
+  }
+  
+  /* סגנונות ייחודיים ללוגו */
+  .logo {
+    /* הוסף כאן את הסגנונות הספציפיים ללוגו שלך, כגון: */
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

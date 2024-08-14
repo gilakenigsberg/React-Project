@@ -1,17 +1,17 @@
-// import React, { useState } from 'react';
+// import React, { useState } from 'react'
 
 // const BookAppointment = () => {
-//   const [service, setService] = useState('');
-//   const [date, setDate] = useState('');
-//   const [time, setTime] = useState('');
-//   const [name, setName] = useState('');
-//   const [phone, setPhone] = useState('');
-//   const [note, setNote] = useState('');
+//   const [service, setService] = useState('')
+//   const [date, setDate] = useState('')
+//   const [time, setTime] = useState('')
+//   const [name, setName] = useState('')
+//   const [phone, setPhone] = useState('')
+//   const [note, setNote] = useState('')
 
 //   const handleSubmit = (e) => {
-//     e.preventDefault();
+//     e.preventDefault()
 //     // Add logic to submit the appointment
-//   };
+//   }
 
 //   return (
 //     <div>
@@ -50,29 +50,29 @@
 //         <button type="submit">Book</button>
 //       </form>
 //     </div>
-//   );
-// };
+//   )
+// }
 
-// export default BookAppointment;
+// export default BookAppointment
 
 
-// import React, { useState } from 'react';
-// import { addAppointment } from '../../api';
+// import React, { useState } from 'react'
+// import { addAppointment } from '../../api'
 
 // const BookAppointment = () => {
-//   const [service, setService] = useState('');
-//   const [date, setDate] = useState('');
-//   const [time, setTime] = useState('');
-//   const [name, setName] = useState('');
-//   const [phone, setPhone] = useState('');
-//   const [note, setNote] = useState('');
+//   const [service, setService] = useState('')
+//   const [date, setDate] = useState('')
+//   const [time, setTime] = useState('')
+//   const [name, setName] = useState('')
+//   const [phone, setPhone] = useState('')
+//   const [note, setNote] = useState('')
 
 //   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const newAppointment = { service, date, time, name, phone, note };
-//     await addAppointment(newAppointment);
-//     alert('Appointment booked successfully!');
-//   };
+//     e.preventDefault()
+//     const newAppointment = { service, date, time, name, phone, note }
+//     await addAppointment(newAppointment)
+//     alert('Appointment booked successfully!')
+//   }
 
 //   return (
 //     <div>
@@ -111,31 +111,31 @@
 //         <button type="submit">Book</button>
 //       </form>
 //     </div>
-//   );
-// };
+//   )
+// }
 
-// export default BookAppointment;
+// export default BookAppointment
 
 // with material-UI:
 
-// import React, { useState } from 'react';
-// import { addAppointment } from '../../api';
-// import { Button, TextField, Typography, Container } from '@mui/material';
+// import React, { useState } from 'react'
+// import { addAppointment } from '../../api'
+// import { Button, TextField, Typography, Container } from '@mui/material'
 
 // const BookAppointment = () => {
-//   const [service, setService] = useState('');
-//   const [date, setDate] = useState('');
-//   const [time, setTime] = useState('');
-//   const [name, setName] = useState('');
-//   const [phone, setPhone] = useState('');
-//   const [note, setNote] = useState('');
+//   const [service, setService] = useState('')
+//   const [date, setDate] = useState('')
+//   const [time, setTime] = useState('')
+//   const [name, setName] = useState('')
+//   const [phone, setPhone] = useState('')
+//   const [note, setNote] = useState('')
 
 //   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const newAppointment = { service, date, time, name, phone, note };
-//     await addAppointment(newAppointment);
-//     alert('Appointment booked successfully!');
-//   };
+//     e.preventDefault()
+//     const newAppointment = { service, date, time, name, phone, note }
+//     await addAppointment(newAppointment)
+//     alert('Appointment booked successfully!')
+//   }
 
 //   return (
 //     <Container>
@@ -198,48 +198,48 @@
 //         </Button>
 //       </form>
 //     </Container>
-//   );
-// };
+//   )
+// }
 
-// export default BookAppointment;
+// export default BookAppointment
 
 
 // with payment:
-import React, { useState } from 'react';
-import { addAppointment } from '../../api';
-import { Button, TextField, Typography, Container } from '@mui/material';
-import Modal from 'react-modal';
-import Cards from 'react-credit-cards';
-import 'react-credit-cards/es/styles-compiled.css';
-import { Appointment } from '../../interfaces/appointmentInterface';
+import React, { useState } from 'react'
+import { addAppointment } from '../../api'
+import { Button, TextField, Typography, Container } from '@mui/material'
+import Modal from 'react-modal'
+// import Cards from 'react-credit-cards'
+// import 'react-credit-cards/es/styles-compiled.css'
+import { Appointment } from '../../interfaces/appointmentInterface'
 
 const BookAppointment = () => {
-  const [service, setService] = useState('');
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [note, setNote] = useState('');
-  const [showModal, setShowModal] = useState(false);
+  const [service, setService] = useState('')
+  const [date, setDate] = useState('')
+  const [time, setTime] = useState('')
+  const [name, setName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [note, setNote] = useState('')
+  const [showModal, setShowModal] = useState(false)
 
-  const [cardNumber, setCardNumber] = useState('');
-  const [expiry, setExpiry] = useState('');
-  const [cvc, setCvc] = useState('');
-  const [focus, setFocus] = useState('');
+  const [cardNumber, setCardNumber] = useState('')
+  const [expiry, setExpiry] = useState('')
+  const [cvc, setCvc] = useState('')
+  const [focus, setFocus] = useState('')
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const newAppointment:Appointment = { service, name, date, time, phone, note };
-    await addAppointment(newAppointment);
-    setShowModal(true);
-  };
+    e.preventDefault()
+    const newAppointment:Appointment = { service, name, date, time, phone, note }
+    await addAppointment(newAppointment)
+    setShowModal(true)
+  }
 
   const handlePaymentSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
     // Handle payment processing here
-    alert('Payment details submitted successfully!');
-    setShowModal(false);
-  };
+    alert('Payment details submitted successfully!')
+    setShowModal(false)
+  }
 
   return (
     <Container>
@@ -305,13 +305,13 @@ const BookAppointment = () => {
       <Modal isOpen={showModal} onRequestClose={() => setShowModal(false)}>
         <h2>Enter Payment Details</h2>
         <form onSubmit={handlePaymentSubmit}>
-          <Cards
+          {/* <Cards
             number={cardNumber}
             name={name}
             expiry={expiry}
             cvc={cvc}
             focused={focus}
-          />
+          /> */}
           <TextField
             label="Card Number"
             value={cardNumber}
@@ -345,7 +345,7 @@ const BookAppointment = () => {
         </form>
       </Modal>
     </Container>
-  );
-};
+  )
+}
 
-export default BookAppointment;
+export default BookAppointment

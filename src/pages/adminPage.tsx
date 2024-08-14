@@ -1,14 +1,14 @@
-import React from "react";
-import { Route, Link, Routes } from "react-router-dom";
-import BusinessDetails from "../components/admin/details.component";
-import Services from "../components/admin/businessServices.component";
-import Appointments from "../components/admin/orders.component";
-import Customers from "../components/admin/customers.component";
+import React from "react"
+import { Route, Link, Routes } from "react-router-dom"
+import BusinessDetails from "../components/admin/details.component"
+import Services from "../components/admin/businessServices.component"
+import Appointments from "../components/admin/orders.component"
+import Customers from "../components/admin/customers.component"
 
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import Container from "react-bootstrap/Container"
+import Nav from "react-bootstrap/Nav"
+import Navbar from "react-bootstrap/Navbar"
+import NavDropdown from "react-bootstrap/NavDropdown"
 
 const AdminPage = () => {
   return (
@@ -38,7 +38,7 @@ const AdminPage = () => {
         <Route path="/admin/customers" element={<Customers />} />
       </Routes>
     </div>
-  );
-};
+  )
+}
 
-export default AdminPage;
+export default AdminPage
