@@ -9,32 +9,6 @@ const UserPage = () => {
   return (
     <div className="user-page-container">
       <Bar />
-      <h1 className="page-title">Photography Business</h1>
-      {/* <nav className="page-nav">
-        <ul className="nav-list">
-          <li className="nav-item">
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/book-appointment" className="nav-link">
-              Book Appointment
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/contact-form" className="nav-link">
-              Contact Form
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/orders" className="nav-link">
-              My orders
-            </Link>
-          </li>
-        </ul>
-      </nav> */}
-
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/BookAppointment" element={<BookAppointment />} />

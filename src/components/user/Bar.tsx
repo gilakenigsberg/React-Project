@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import '../../assets/styles/Bar.css'
+import "../../assets/styles/Bar.css";
 import Home from "./home.component";
 import BookAppointment from "./meeting.component";
 import ContactForm from "./Contact.component";
@@ -46,7 +46,10 @@ function Bar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'skyblue', color: 'white', top: 0 }}>
+    <AppBar
+      position="fixed"
+      sx={{ backgroundColor: "skyblue", color: "white" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />

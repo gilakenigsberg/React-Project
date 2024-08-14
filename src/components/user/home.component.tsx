@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 
 const Home = () => {
+const log = (event: React.MouseEvent<HTMLAnchorElement>): void => {
+  event.preventDefault();
+  console.log("You clicked a link!");
+};
+
+
   return (
     <div>
       <h2>Welcome to Photography Business</h2>
@@ -15,7 +21,8 @@ const Home = () => {
         את יכולות השירה שלך. מוזמנת ליצור קשר ולהתחיל את המסע המוזיקלי שלך איתי!
       </div>
       <div>
-        <Link to="/services">הזמיני הופעה </Link>
+        <Link onClick={log}
+         to="/services">הזמיני הופעה </Link>
         <Link to="/services">הירשמי לקורס </Link>
         <Link to="/contact-form">צרי קשר </Link>
         <Link to="/blog">בלוג </Link>

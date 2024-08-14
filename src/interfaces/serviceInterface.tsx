@@ -1,7 +1,8 @@
 interface Service {
   name: string
   description: string
+  availability: boolean
+  details?: string
   price: number
-  book: string
-  imgSrc: string
+  image: string
 }

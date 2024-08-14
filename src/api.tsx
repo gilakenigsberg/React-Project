@@ -1,14 +1,14 @@
 import axios from 'axios'
 import { Appointment } from './interfaces/appointmentInterface'
 
-const API_URL = 'http://localhost:5000'
+const API_URL = 'http://localhost:8080'
 
 export const getBusinessDetails = async () => {
   return await axios.get(`${API_URL}/business-details`)
 }
 
 export const getServices = async () => {
-  return await axios.get(`${API_URL}/services`)
+  return await axios.get(`${API_URL}/services/getServices`)
 }
 
 export const getAppointments = async () => {
