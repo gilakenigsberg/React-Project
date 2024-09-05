@@ -21,11 +21,10 @@ const log = (event: React.MouseEvent<HTMLAnchorElement>): void => {
         את יכולות השירה שלך. מוזמנת ליצור קשר ולהתחיל את המסע המוזיקלי שלך איתי!
       </div>
       <div>
-        <Link onClick={log}
-         to="/services">הזמיני הופעה </Link>
-        <Link to="/services">הירשמי לקורס </Link>
-        <Link to="/contact-form">צרי קשר </Link>
-        <Link to="/blog">בלוג </Link>
+        <Link to="/Services">הזמיני הופעה </Link>
+        <Link to="/Services">הירשמי לקורס </Link>
+        <Link to="/ContactForm">צרי קשר </Link>
+        <Link to="/Blog">בלוג </Link>
       </div>
     </div>
   );

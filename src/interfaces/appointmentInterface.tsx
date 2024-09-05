@@ -1,8 +1,9 @@
 export interface Appointment {
   service: string
   name: string
-  date: Date
+  date: string
   time: string
+  email: string
   phone: string
   note: string
 }

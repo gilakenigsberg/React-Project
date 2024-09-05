@@ -1,4 +1,5 @@
 interface Service {
+  id?: string;
   name: string
   description: string
   availability: boolean

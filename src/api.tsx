@@ -20,5 +20,5 @@ export const getCustomers = async () => {
 }
 
 export const addAppointment = async (appointment: Appointment) => {
-  return await axios.post(`${API_URL}/appointments/add`, appointment)
+  return await axios.post(`${API_URL}/meeting/createMeeting`, appointment)
 }
