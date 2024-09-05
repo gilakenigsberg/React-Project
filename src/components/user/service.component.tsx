@@ -1,15 +1,16 @@
-const Service: React.FC<Service> = (serviceData) => {
-  const name = serviceData.name
-  const description = serviceData.description
-  const price = serviceData.price
-  const imgSrc = serviceData.imgSrc
-  const book = serviceData.book
+import { Link } from "react-router-dom";
+
+const Service: React.FC<{ serviceData: Service }> = ({ serviceData }) => {
+  const name = serviceData.name;
+  const description = serviceData.description;
+  const price = serviceData.price;
+  const image = serviceData.image;
   return (
     <div className="service">
       <h3>{name}</h3>
       <p>{description}</p>
-      <button>{book}</button>
+      <Link to="/BookAppointment">book now</Link>
     </div>
-  )
-}
-export default Service
+  );
+};
+export default Service;

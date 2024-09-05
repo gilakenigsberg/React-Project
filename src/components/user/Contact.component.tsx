@@ -9,7 +9,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    await axios.post('http://localhost:5000/api/messages', { name, email, message })
+    await axios.post('http://localhost:8080/api/messages', { name, email, message })
     alert('Message sent successfully!')
   }
 
